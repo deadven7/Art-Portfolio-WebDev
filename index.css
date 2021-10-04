@@ -1,0 +1,183 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    font-family: 'Open Sans';
+    min-height: 200vh;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+.logo-mobile {
+    display: none;
+}
+.slideanim {
+    visibility:hidden;
+}
+.slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+}
+.ph-nav {
+    display: none;
+    margin-left: 30px;
+}
+@keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(50%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+}
+@-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(50%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+}
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding: 100px; 
+    width: 300px;
+    overflow-x: hidden; 
+    box-shadow: 0px 0px 14px -5px rgba(0,0,0,0.2);
+}
+.sidebar-centered {
+    float: none;
+    position: relative;
+    top: 25%;
+    left: 0;
+}
+.logo {
+    position: fixed;
+    height: 110px; 
+    width: 250px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.nav-list-item {
+    font-family: 'Cinzel';
+    font-size: 20px;
+}
+.nav-logo {
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+}
+.content {
+    margin-left: 300px;
+    margin-top: 20px;
+    width: auto;
+    position: relative;
+    overflow: auto;
+}
+.title {
+    font-family: 'Cinzel';
+    font-size: 50px;
+}
+.subtitle {
+    font-family: 'Cinzel';
+    font-size: 30px;
+}
+.text {
+    font-family: 'Cinzel';
+    font-size: 20px;
+}
+.artwork {
+    margin: 20px;
+    width: 100%;
+}
+.card {
+    box-shadow: 0px 0px 14px -5px rgba(0,0,0,0.2);
+}
+.disp {
+    padding: 20px 0px;
+    width: 100%;
+    height: auto;
+    border: 0px transparent;
+}
+.modal-img-vert {
+    max-width: 70%;
+    height: auto;
+    margin: 2vw 4vw;
+    max-height: 100vw;
+}
+.modal-img-hor {
+    max-width: 80vw;
+    height: auto;
+    margin: 2vw 4vw;
+}
+.paperback {
+    background-image:  url('contents/images/yellowparchment.jpg') !important; 
+    background-repeat: repeat !important;
+}
+.ft {
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    margin: 5px;
+}
+.ft:hover {
+    width: 60px;
+    height: 60px;
+    transition: height 0.2s, width 0.2s;
+}
+@media (min-width: 992px) {
+    main {
+      padding-left: 240px;
+    }
+}
+@media (max-width: 992px) {
+    .sidebar {
+      width: 100%;
+    }
+    .ph-nav {
+        display: inline-block;
+        font-family: 'Cinzel' !important;
+        font-size: 24px !important;
+    }
+    .ph-link {
+        padding-left: 30px;
+    }    
+    .navbar-default{
+        transition:500ms ease;
+        color: #000000;
+        background: #ffffff !important;
+    }
+    .navbar-default.scrolled{
+        background-color: #ffffff;
+        box-shadow: 5px 0px 20px rgba(0,0,0, .2);
+    }
+    .title {
+        display: none;
+    }
+    .content {
+        margin: 0px 0px;
+    }
+    .artwork {
+        margin: 10px 0px !important;
+    }
+}
